@@ -1,0 +1,10 @@
+name: titan-vision
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - opencv
+  - streamlit
+  - pip:
+    - ultralytics
+    - lapx
