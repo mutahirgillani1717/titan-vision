@@ -1,16 +1,3 @@
-# --- THE OPENCV INTERCEPTOR ---
-# This MUST be at the very top of the file.
-import sys
-import subprocess
-
-try:
-    import cv2
-except ImportError:
-    # If YOLO forced the broken OpenCV, catch the libGL crash and nuke it.
-    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-python-headless"])
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python-headless==4.8.0.74"])
-
-# Now safely import the rest of the libraries
 import cv2
 import streamlit as st
 import tempfile
@@ -117,7 +104,7 @@ if uploaded_video is not None and len(class_ids) > 0:
         
         frame_count += 1
         curr_time = time.time()
-        fps = 1 / (curr_time - prev_time)
+        fps = 1 / (curr_time - prev_time) if (curr_time - prev_time) > 0 else 0
         prev_time = curr_time
         
         objects_on_screen = len(results[0].boxes) if results[0].boxes is not None else 0
