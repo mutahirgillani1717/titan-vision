@@ -1,4 +1,0 @@
-streamlit
-ultralytics
-lapx
-numpy==1.26.4
