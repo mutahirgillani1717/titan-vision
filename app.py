@@ -2,11 +2,11 @@
 # Project: Titan Vision - High-Speed Object Tracking Pipeline
 
 import streamlit as st
-import cv2
+
 import tempfile
 import time
 from ultralytics import YOLO
-
+import cv2
 # --- Page Configuration ---
 st.set_page_config(page_title="Titan Vision developed by Mutahir Hussain | AI Tracker", layout="wide", initial_sidebar_state="expanded")
 
