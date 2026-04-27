@@ -21,4 +21,4 @@ Titan Vision is a high-speed, edge-optimized computer vision pipeline designed f
 To test this pipeline on your own machine:
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/yourusername/titan-vision.git](https://github.com/yourusername/titan-vision.git)
+   git clone [https://github.com/mutahirgillani1717/titan-vision.git](https://github.com/mutahirgillani1717/titan-vision.git)
